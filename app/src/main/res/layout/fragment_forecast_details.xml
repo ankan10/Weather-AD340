@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.ForecastDetailsFragment">
+
+    <TextView
+        android:id="@+id/tempText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        app:layout_constraintStart_toEndOf="@id/forecastIcon"
+        app:layout_constraintTop_toBottomOf="@id/dateText"
+        tools:text="75.4°" />
+
+    <TextView
+        android:id="@+id/descripionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastIcon"
+        app:layout_constraintStart_toStartOf="@+id/tempText"
+        app:layout_constraintTop_toBottomOf="@+id/tempText"
+        tools:text="Partly Cloudy" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        tools:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        app:layout_constraintStart_toEndOf="@+id/forecastIcon"
+
+        app:layout_constraintTop_toTopOf="@+id/forecastIcon" />
+
+    <ImageView
+        android:id="@+id/forecastIcon"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        tools:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
